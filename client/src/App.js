@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Switch, Link } from "react-router-dom";
+
+import logo from "./logo.svg";
+import "./App.css";
+
+import Login from "./components/LogIn.js";
+import AdminDash from "./components/admin/adminDash.js";
+import memberDash from "./components/member/memberDash";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Link to="/">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>Role Bases User Login</p>
+        </header>
+      </Link>
+
+      <main className="container">
+        <Route exact path="/" component={Login} />
+        <Switch>
+          <Route exact path="/admin" component={AdminDash} />
+          <Route exact path="/member" component={memberDash} />
+        </Switch>
+      </main>
     </div>
   );
 }
