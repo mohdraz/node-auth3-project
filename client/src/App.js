@@ -3,6 +3,7 @@ import { Route, Switch, Link } from "react-router-dom";
 
 import logo from "./logo.svg";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Login from "./components/LogIn.js";
 import AdminDash from "./components/admin/adminDash.js";

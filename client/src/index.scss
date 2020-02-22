@@ -48,4 +48,23 @@ code {
 
 a {
   text-decoration: none;
+  color: red;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background: lightcoral;
+
+  .navLink {
+    font-size: 25px;
+    padding: 5px 10px;
+
+    &:hover {
+      background: lightgreen;
+    }
+  }
 }
